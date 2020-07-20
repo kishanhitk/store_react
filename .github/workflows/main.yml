@@ -1,9 +1,10 @@
-name: CI
+name: deployement
 
 on:
   push:
     branches:
     - master
+    - release/*
 
 jobs:
   firebase-deploy:
