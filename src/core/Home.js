@@ -9,6 +9,7 @@ export default function Home() {
       <Base title="Welcome">
         <h1>Hello</h1>
         <p>Test</p>
+        <p>Test</p>
       </Base>
     </div>
   );
