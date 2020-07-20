@@ -8,6 +8,7 @@ export default function Home() {
     <div>
       <Base title="Welcome">
         <h1>Hello</h1>
+        <p>Test</p>
       </Base>
     </div>
   );
