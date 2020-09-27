@@ -36,7 +36,26 @@ const AdminDashboard = () => {
       </div>
     );
   };
-  const adminRightSide = () => {};
+  const adminRightSide = () => {
+    return (
+      <div className="card mb-4">
+        <div className="card-header">Admin Information</div>
+        <ul className="list-group">
+          <li className="list-group-item">
+            <span className="badge badge-success mr-2 ">Name: </span>
+            {name}
+          </li>
+          <li className="list-group-item">
+            <span className="badge badge-success mr-2 ">Email: </span>
+            {email}
+          </li>
+          <li className="list-group-item">
+            <span className="badge badge-danger mr-2 ">Admin Area </span>
+          </li>
+        </ul>
+      </div>
+    );
+  };
   return (
     <Base
       title="Admin Dashbaord"
