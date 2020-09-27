@@ -3,6 +3,6 @@
     "javascript": "javascriptreact"
   },
   "files.associations": {
-    "*.js": "javascriptreact"
+    "*.js": "javascript"
   }
 }

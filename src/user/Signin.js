@@ -21,19 +21,19 @@ const Signin = () => {
     signin({
       email,
       password,
-    }).then((data) => {
-      console.log(data)
-      console.log(data.error)
-      if (data.error) {
-        setValues({ ...values, error: data.error, loading: false });
-      } else {
-        authenticate(data, () => {
-          setValues({ ...values, didRedirect: true });
-        });
-      }
-    }).catch((e) =>
-      console.log("Signin request failed" + e)
-    );
+    })
+      .then((data) => {
+        console.log(data);
+        console.log(data.error);
+        if (data.error) {
+          setValues({ ...values, error: data.error, loading: false });
+        } else {
+          authenticate(data, () => {
+            setValues({ ...values, didRedirect: true });
+          });
+        }
+      })
+      .catch((e) => console.log("Signin request failed" + e));
   };
   const signInForm = () => {
     return (
@@ -74,20 +74,17 @@ const Signin = () => {
   const performRedirect = () => {
     if (didRedirect) {
       if (user && user.role === 1) {
-        return <p>Redirect to Admin</p>
-      }
-      else {
-        return <p>Redirect to user Dashboard</p>
+        return <p>Redirect to Admin</p>;
+      } else {
+        return <p>Redirect to user Dashboard</p>;
       }
     }
     if (isAuthenticated()) {
-      return <Redirect to="/" />
+      return <Redirect to="/" />;
     }
-  }
+  };
   const loadingmessage = () => {
-    return (
-      loading && <div className="alert alert-info">Loading.....</div>
-    )
+    return loading && <div className="alert alert-info">Loading.....</div>;
   };
   const errormessage = () => {
     return (
