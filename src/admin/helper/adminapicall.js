@@ -58,7 +58,7 @@ export const getAllProducts = async () => {
 
 //Delete a product
 
-export const deleteProduct = async (productId, userId, token, product) => {
+export const deleteProduct = async (productId, userId, token) => {
   try {
     const response = await fetch(`${API}/product/${productId}/${userId}`, {
       method: "DELETE",
